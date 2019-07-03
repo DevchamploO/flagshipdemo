@@ -1,0 +1,283 @@
+* { 
+    box-sizing: border-box; 
+    padding:0; margin:0;
+} 
+
+html,
+body { font-family: sans-serif; height: 100%;}
+
+footer {
+  position: relative;
+  background: #222;
+  padding: 20px 30px;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+}
+
+footer p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #eee;
+  max-width: 1200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.grid-item {
+  width: 18%;
+}
+
+.gutter-sizer {
+  width: 2%;
+}
+
+.grid-item {
+  float: left;
+  background: #ccc;
+  border: 2px solid #888;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.grid-item:hover {
+  border-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  z-index: 2;
+}
+
+/* box content */
+.item-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: inherit;
+  overflow: auto;
+}
+
+.item-content::-webkit-scrollbar{
+  width: 0 !important;
+}
+
+
+.item-content p {
+  padding: 40px 10px;
+}
+
+.short-oval .item-content p,
+.oval .item-content p,
+.circle .item-content p {
+  padding: 16%;
+}
+
+.item-content img,
+.item-content iframe {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+/* box sizes and shapes */
+.lg-box {
+  width: 38%;
+}
+
+.tall-box {
+  width: 18%;
+}
+
+.wide-box {
+  width: 40%;
+}
+.short-rectangle,
+.short-oval {
+  width: 19%;
+}
+
+.full-width-rectangle {
+  width: 100%;
+}
+
+.half-square {
+  width: 49%;
+}
+
+.round {
+  border-radius: 10%;
+}
+
+.oval {
+  border-radius: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+/* rotate, resize, remove, and modal buttons */
+.btns-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.control-btn {
+  width: 20px;
+  height: 20px;
+  bottom: -10px;
+  border-radius: 50%;
+  position: absolute;
+  cursor:auto;
+}
+
+.move-btn {
+  top:-10px;
+  bottom:0;
+  left: calc(50% - 10px);
+  background-color: rgba(255, 121, 121,1.0);
+  cursor: move;
+}
+
+.rotate-btn {
+  left: -5px;
+    bottom: -10px;
+  background-color: rgba(126, 214, 223,1.0);
+}
+
+.round .rotate-btn {
+  left: 5px;
+  bottom: 0px;
+}
+
+.oval .rotate-btn {
+  left:35px;
+  bottom: 10px;
+}
+
+.circle .rotate-btn {
+  left: 135px;
+  bottom: 25px;
+}
+
+.remove-btn {
+    left: calc(50% - 10px);
+    border-color: rgba(235, 77, 75,1.0);
+    background-color: rgba(255, 121, 121,1.0);
+}
+
+.resize-btn {
+    right: -5px;
+    background-color: rgba(126, 214, 223,1.0);
+}
+
+.round .resize-btn {
+  right: 5px;
+  bottom: 0px;
+}
+
+.oval .resize-btn {
+  right: 35px;
+  bottom:10px;
+}
+
+.circle .resize-btn {
+  right: 135px;
+  bottom: 25px;
+}
+
+
+.open-modal-btn{
+  opacity: 0.6;
+  position: absolute;
+  width: 60px;
+  top: 10px;
+  right: calc(50% - 30px);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  text-align: center;
+}
+
+.open-modal-btn:hover{
+  opacity: 1;
+}
+
+.footer-modal-btn{
+  text-decoration: none;
+}
+
+.footer-modal-btn,
+.footer-modal-btn:active,
+.footer-modal-btn:visited {
+  color: #fff;
+}
+
+.blocker {
+  z-index: 5;
+}
+
+/* button icons */
+.fa {
+  padding-top:2px;
+  padding-left:2px;
+}
+
+/* modal window */
+.tabs-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs-container .nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+    display: inline-flex;
+}
+
+.nav li a {
+      text-decoration: none;
+      color: darkgray;
+      padding: 10px;
+      transition: all .3s ease-in-out;
+      border-bottom: 1px solid transparent;
+}
+
+.nav li a:hover {
+        color: gray;
+}
+
+.nav .active a { 
+  color: slateblue; 
+  border-bottom: 1px solid slateblue;
+}
+
+.nav .active a:hover {
+    border-color: transparent;
+    background: slateblue;
+    color: white;
+}
+
+.tab-content {
+  margin-top: 50px;
+}
+
+.tab-pane { 
+  display: none;
+}
+
+.tab-pane.active { 
+  display: block; 
+}
